@@ -1,12 +1,11 @@
 public abstract class Main {
     public static void main(String[] args) {
-        createObject("Iphone").print();
-        createObject("Nokia").print();
-        createObject("Samsung").print();
-
-
-
-
+    Printable[] printables = {createObject("Iphone"), createObject("Nokia"),
+                createObject("Samsung")};
+        for (Printable printable : printables) {
+            assert printable != null;
+            printable.print();
+        }
     }
     public static Phone createObject (String className){
         Printable printable=null;
